@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexander Ops · Рабочий пульт</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css?v=0.6">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Alexander Ops">
+        <img src="./assets/logo-farmznanie-blue.svg" alt="ФармЗнание">
+        <span>Alexander Ops</span>
+      </a>
+
+      <nav class="role-switch" aria-label="Роль">
+        <button class="role-button is-active" data-role="alexander" type="button">Саша</button>
+        <button class="role-button" data-role="manager" type="button">Команда</button>
+      </nav>
+
+      <div class="top-actions">
+        <button class="icon-button" id="resetButton" type="button" aria-label="Сбросить правки" title="Сбросить правки">
+          <span aria-hidden="true">↺</span>
+        </button>
+        <button class="icon-button" id="exportButton" type="button" aria-label="Экспортировать JSON" title="Экспортировать JSON">
+          <span aria-hidden="true">⇩</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="control-strip" aria-label="Срез дня">
+        <div>
+          <p class="eyebrow">26 июня · рабочий срез</p>
+          <h1>Что реально висит сейчас</h1>
+        </div>
+        <div class="search-wrap">
+          <label for="searchInput">Поиск</label>
+          <input id="searchInput" type="search" placeholder="клиент, владелец, задача">
+        </div>
+      </section>
+
+      <section class="metric-row" id="metricRow" aria-label="Метрики"></section>
+
+      <section class="main-grid">
+        <aside class="side-panel">
+          <section class="panel-band">
+            <h2>Фокус дня</h2>
+            <div class="focus-list" id="focusList"></div>
+          </section>
+
+          <section class="panel-band">
+            <h2>Владельцы</h2>
+            <div class="owner-map" id="ownerMap"></div>
+          </section>
+        </aside>
+
+        <section class="work-area">
+          <div class="filters" aria-label="Фильтры">
+            <select id="ownerFilter" aria-label="Фильтр по владельцу"></select>
+            <select id="laneFilter" aria-label="Фильтр по очереди"></select>
+            <select id="priorityFilter" aria-label="Фильтр по приоритету"></select>
+            <label class="toggle-pill">
+              <input id="doneToggle" type="checkbox">
+              <span>Готовые</span>
+            </label>
+          </div>
+          <div class="board-status" id="boardStatus" aria-live="polite">Готово к работе</div>
+          <section class="operator-panel" id="operatorPanel" aria-label="Карточка в работе"></section>
+
+          <div class="lanes" id="lanes"></div>
+        </section>
+      </section>
+
+      <section class="meeting-band">
+        <div>
+          <p class="eyebrow">Sources</p>
+          <h2>Источники, которые попали в работу</h2>
+        </div>
+        <div class="source-list" id="sourceList"></div>
+      </section>
+    </main>
+  </div>
+
+  <template id="cardTemplate">
+    <article class="task-card">
+      <div class="card-head">
+        <div class="card-id-group">
+          <button class="drag-handle" type="button" aria-label="Перетащить карточку" title="Перетащить карточку">☰</button>
+          <span class="task-id"></span>
+        </div>
+        <span class="priority-pill"></span>
+      </div>
+      <div class="route-row">
+        <span class="lane-chip"></span>
+        <span class="status-chip"></span>
+      </div>
+      <h3></h3>
+      <p class="next-action"></p>
+      <dl class="meta-grid">
+        <div>
+          <dt>Владелец</dt>
+          <dd class="owner"></dd>
+        </div>
+        <div>
+          <dt>Роль Саши</dt>
+          <dd class="alex-role"></dd>
+        </div>
+      </dl>
+      <div class="card-foot">
+        <select class="status-select" aria-label="Статус задачи"></select>
+        <button class="small-button" type="button">Открыть</button>
+      </div>
+      <div class="quick-actions" aria-label="Быстрые действия"></div>
+      <div class="draft-panel" hidden>
+        <p class="draft-text"></p>
+        <button class="copy-button" type="button">Скопировать ответ</button>
+      </div>
+      <p class="evidence" hidden></p>
+    </article>
+  </template>
+
+  <script src="./app.js?v=0.6"></script>
+</body>
+</html>
