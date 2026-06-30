@@ -1,6 +1,6 @@
-const DATA_URL = './data/current_backlog_2026-06-29.json';
-const ENCRYPTED_DATA_URL = './data/current_backlog_2026-06-29.enc.json';
-const STORAGE_KEY = 'alexander-ops-cloud-skeleton-v0-8-magnit-one-slide-2026-06-29';
+const DATA_URL = './data/current_backlog_2026-06-30.json';
+const ENCRYPTED_DATA_URL = './data/current_backlog_2026-06-30.enc.json';
+const STORAGE_KEY = 'alexander-ops-cloud-skeleton-v0-9-telemost-actions-2026-06-30';
 
 const statusOptions = [
   'new',
@@ -27,6 +27,21 @@ const statusOptions = [
   'waiting_artem_answer',
   'vika_review_in_work',
   'needs_action_log',
+  'needs_api_decision',
+  'needs_client_materials',
+  'needs_comments_pack',
+  'needs_conversion_ideas',
+  'needs_handoff_table',
+  'needs_human_ai_policy',
+  'needs_kpi_draft',
+  'needs_loyalty_map',
+  'needs_product_update',
+  'needs_prototype_review',
+  'needs_reactivation_launch',
+  'needs_sales_answer',
+  'needs_security_scheme',
+  'needs_status_check',
+  'needs_tracker_test',
   'needs_triage',
   'waiting_external',
   'needs_client_brief',
@@ -69,6 +84,21 @@ const statusLabels = {
   waiting_artem_answer: 'Ждет ответ Артема',
   vika_review_in_work: 'У Вики на review',
   needs_action_log: 'Нужен action log',
+  needs_api_decision: 'Нужен ответ по API',
+  needs_client_materials: 'Нужны материалы клиента',
+  needs_comments_pack: 'Нужен пакет комментариев',
+  needs_conversion_ideas: 'Нужны гипотезы конверсии',
+  needs_handoff_table: 'Нужна передача дел',
+  needs_human_ai_policy: 'Нужны правила ИИ/людей',
+  needs_kpi_draft: 'Нужен черновик KPI',
+  needs_loyalty_map: 'Нужна карта связки',
+  needs_product_update: 'Нужен sales update',
+  needs_prototype_review: 'Нужен review прототипа',
+  needs_reactivation_launch: 'Нужен план реактивации',
+  needs_sales_answer: 'Нужен ответ продаж',
+  needs_security_scheme: 'Нужна схема защиты',
+  needs_status_check: 'Нужен статус',
+  needs_tracker_test: 'Нужен тест Трекера',
   needs_triage: 'Нужен разбор',
   waiting_external: 'Ждет внешнего ответа',
   needs_client_brief: 'Нужен клиентский бриф',
