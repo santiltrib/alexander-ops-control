@@ -1,6 +1,6 @@
 const DATA_URL = './data/current_backlog_2026-07-03.json';
-const ENCRYPTED_DATA_URL = './data/current_backlog_2026-07-03-v4.enc.json';
-const STORAGE_KEY = 'alexander-ops-cloud-skeleton-v0-13-daily-control-2026-07-03-v4';
+const ENCRYPTED_DATA_URL = './data/current_backlog_2026-07-03-v5.enc.json';
+const STORAGE_KEY = 'alexander-ops-cloud-skeleton-v0-14-daily-control-2026-07-03-v5';
 
 const statusOptions = [
   'new',
