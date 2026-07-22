@@ -5,7 +5,7 @@ Static protected dashboard prototype.
 ## Security Model
 
 - The deploy package does not contain the raw backlog JSON.
-- Dashboard data is stored as an encrypted browser-side envelope in `data/current_backlog_2026-07-02.enc.json`.
+- Dashboard data is stored as an encrypted browser-side envelope in `data/current_backlog_2026-07-22.enc.json`.
 - The access key is not stored in this repository.
 - This is an interim prototype. Shared editing, users, roles, audit log, and integrations require a backend.
 
